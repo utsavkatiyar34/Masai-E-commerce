@@ -1,0 +1,29 @@
+.productdiv{
+ margin:2.5vw;
+ display: grid;
+ grid-template-columns: repeat(5, 1fr);
+}
+.productcard{
+ display: flex;
+ overflow: auto;
+ flex-direction: column;
+ border:2px solid purple;
+ text-align: center;
+ padding:.5vw;
+ font-family: Arial, sans-serif;
+ margin:0.5vw;
+}
+.productcard>h4{
+margin-top: .5vw;
+margin-bottom:0;
+font-size: 1.15vw;
+color: purple;
+}
+.productcard>h2{
+        margin-top:0;
+        margin-bottom:.5vw;
+        font-size: 1.5vw;
+        color: purple;       
+        font-weight: 500;
+        text-transform: uppercase;
+}

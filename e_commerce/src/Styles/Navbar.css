@@ -1,0 +1,87 @@
+.navbar{
+        display:flex;
+        flex-direction: row;
+        /* overflow-x: auto;
+        overflow-y: auto; */
+        padding-left:5vw;
+        padding-right:5vw;
+        max-height: 15vw;
+        border-bottom: 3px solid purple;
+        border-top: 3px solid purple;
+        
+        background-color: white;
+}
+.logonav{
+        font-family: Copperplate, Papyrus, fantasy;
+        font-size: 2.2vw;
+        margin-top: auto;
+        margin-bottom: auto;
+        font-weight: 800;
+        width:35vw;
+        
+}
+.logonav-nav{
+        text-decoration: none;
+        color: purple;
+        
+}
+.logonav:hover{
+        cursor: pointer;
+}
+.menu{
+      padding-top:.8vw;
+      padding-bottom: .8vw;
+      margin-right: 0px;
+      margin-left: auto;
+      display:flex;
+      flex-direction: row;
+      overflow: auto;
+      float: right;
+      font-size: 1.5vw;    
+}
+@media only screen and (max-width: 768px) {
+        .menu{
+                padding-top:.8vw;
+                padding-bottom: .8vw;
+                margin-right: 0px;
+                margin-left: auto;
+                display:flex;
+                flex-direction: row;
+                overflow: auto;
+                float: right;
+                font-size: 2vw;    
+          }  
+}
+.menu>ul{
+        font-family: Arial,sans-serif;
+        padding-top: 1vw;
+        padding-bottom: 1vw;
+        padding-left: 1vw;
+        padding-left: 1vw;
+        display: flex;
+        overflow: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        margin-right: auto;     
+}
+.menulinks{
+ padding-top: .5vw;
+ padding-bottom: .5vw;
+ padding-left: .2vw;
+ padding-right: .2vw;
+ text-align: center;
+ color: purple;
+ text-decoration: none;
+ font-weight: 400;
+}
+.menulinks:hover{
+        cursor: pointer;
+        color:rgb(246, 13, 246);;
+        /* font-weight: bold; */
+        transition: all .5s ease-in-out 0s;
+}
+.menulinks:active{
+        color:purple;;
+        font-weight: bold;
+}       
