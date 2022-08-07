@@ -1,10 +1,10 @@
 import {
-        ADD_TODO_ERROR,
-        ADD_TODO_LOADING,
-        ADD_TODO_SUCCESS,
-        GET_TODO_LOADING,
-        GET_TODO_SUCCESS,
-        GET_TODO_ERROR,
+        ADD_TOCART_ERROR,
+        ADD_TOCART_LOADING,
+        ADD_TOCART_SUCCESS,
+        GET_PRODUCTS_LOADING,
+        GET_PRODUCTS_SUCCESS,
+        GET_PRODUCTS_ERROR,
         PATCH_TODO_ERROR,
         PATCH_TODO_LOADING,
         PATCH_TODO_SUCCESS,
@@ -20,36 +20,36 @@ import {
         LOGOUT,
       } from "./actionTypes";
       
-      export const addToDoLoading = () => {
+      export const addToCartLoading = () => {
         return {
-          type: ADD_TODO_LOADING,
+          type: ADD_TOCART_LOADING,
         };
       };
-      export const addToDoSuccess = (payload) => {
+      export const addToCartSuccess = (payload) => {
         return {
-          type: ADD_TODO_SUCCESS,
+          type: ADD_TOCART_SUCCESS,
           payload,
         };
       };
-      export const addToDoError = () => {
+      export const addToCartError = () => {
         return {
-          type: ADD_TODO_ERROR,
+          type: ADD_TOCART_ERROR,
         };
       };
-      export const getToDoLoading = () => {
+      export const getProductsLoading = () => {
         return {
-          type: GET_TODO_LOADING,
+          type: GET_PRODUCTS_LOADING,
         };
       };
-      export const getToDoSuccess = (payload) => {
+      export const getProductsSuccess = (payload) => {
         return {
-          type: GET_TODO_SUCCESS,
+          type: GET_PRODUCTS_SUCCESS,
           payload,
         };
       };
-      export const getToDoError = () => {
+      export const getProductsError = () => {
         return {
-          type: GET_TODO_ERROR,
+          type: GET_PRODUCTS_ERROR,
         };
       };
       

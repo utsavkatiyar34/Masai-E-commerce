@@ -112,7 +112,7 @@ export default function ButtonAppBar() {
               height: "35px",
               width: "100px",
               marginLeft: "auto",
-              marginRight: "-74vw",
+              marginRight: "-70vw",
               "&:hover": { backgroundColor: "purple", color: "white" },
             }}
           >

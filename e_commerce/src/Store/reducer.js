@@ -1,13 +1,13 @@
 import {
-        ADD_TODO_ERROR,
-        ADD_TODO_LOADING,
-        ADD_TODO_SUCCESS,
+  ADD_TOCART_ERROR,
+  ADD_TOCART_LOADING,
+  ADD_TOCART_SUCCESS,
+  GET_PRODUCTS_LOADING,
+  GET_PRODUCTS_SUCCESS,
+  GET_PRODUCTS_ERROR,
         DELETE_TODO_ERROR,
         DELETE_TODO_LOADING,
         DELETE_TODO_SUCCESS,
-        GET_TODO_ERROR,
-        GET_TODO_LOADING,
-        GET_TODO_SUCCESS,
         PATCH_TODO_ERROR,
         PATCH_TODO_LOADING,
         PATCH_TODO_SUCCESS,
@@ -31,7 +31,12 @@ import {
           loading: false,
           error: false,
         },
-        todo: {
+        products: {
+          loading: false,
+          error: false,
+          data: [],
+        },
+        cart: {
           loading: false,
           error: false,
           data: [],
@@ -39,55 +44,56 @@ import {
       };
       export const reducer = (state = initialState, action) => {
         switch (action.type) {
-          case ADD_TODO_LOADING:
+          case ADD_TOCART_LOADING:
             return {
               ...state,
-              todo: {
-                ...state.todo,
+             cart: {
+                ...state.cart,
                 loading: true,
               },
             };
-          case ADD_TODO_SUCCESS:
+          case ADD_TOCART_SUCCESS:
             return {
               ...state,
-              todo: {
-                ...state.todo,
+              cart: {
+                ...state.cart,
                 loading: false,
                 error: false,
+                data:action.payload
               },
             };
-          case ADD_TODO_ERROR:
+          case ADD_TOCART_ERROR:
             return {
               ...state,
-              todo: {
-                ...state.todo,
+              cart: {
+                ...state.cart,
                 loading: false,
                 error: true,
               },
             };
-          case GET_TODO_LOADING:
+          case GET_PRODUCTS_LOADING:
             return {
               ...state,
-              todo: {
-                ...state.todo,
+              products: {
+                ...state.products,
                 loading: true,
               },
             };
-          case GET_TODO_SUCCESS:
+          case GET_PRODUCTS_SUCCESS:
             return {
               ...state,
-              todo: {
-                ...state.todo,
+              products: {
+                ...state.products,
                 loading: false,
                 error: false,
                 data: action.payload,
               },
             };
-          case GET_TODO_ERROR:
+          case GET_PRODUCTS_ERROR:
             return {
               ...state,
-              todo: {
-                ...state.todo,
+              products: {
+                ...state.products,
                 loading: false,
                 error: true,
               },
