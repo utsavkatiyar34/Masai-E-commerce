@@ -90,9 +90,10 @@ import {
           type: SIGNUP_TODO_LOADING,
         };
       };
-      export const signupToDoSuccess = () => {
+      export const signupToDoSuccess = (payload) => {
         return {
           type: SIGNUP_TODO_SUCCESS,
+          payload,
         };
       };
       export const signupToDoError = () => {

@@ -160,6 +160,13 @@ import {
                 loading: false,
                 error: false,
               },
+              login: {
+                ...state.login,
+                loading: false,
+                error: false,
+                token: action.payload.token,
+                logdata: action.payload.token,
+              }
             };
           case SIGNUP_TODO_ERROR:
             return {
