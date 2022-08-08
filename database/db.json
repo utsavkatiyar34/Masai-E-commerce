@@ -1134,6 +1134,28 @@
       "category": "pharmacy",
       "hex": "#3d54d3",
       "imageBase": "https://via.placeholder.com/500"
+    },
+    {
+      "id": 65,
+      "title": "ciprofloxacin",
+      "color": "Blue",
+      "price": 136,
+      "description": "primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam",
+      "rating": 2.3,
+      "category": "pharmacy",
+      "hex": "#3fa369",
+      "imageBase": "https://via.placeholder.com/500"
+    },
+    {
+      "id": 47,
+      "title": "Muffin - Banana Nut Individual",
+      "color": "Orange",
+      "price": 53,
+      "description": "faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus",
+      "rating": 1.7,
+      "category": "grocery",
+      "hex": "#767616",
+      "imageBase": "https://via.placeholder.com/500"
     }
   ]
 }

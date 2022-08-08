@@ -13,7 +13,7 @@ export const Individualitem = () => {
   const dispatch = useDispatch();
   
   const { data } = useSelector((state) => state.products);
-  const { cartitems } = useSelector((state) => state.cart);
+  
 
 let handleAddcart=()=>{
   dispatch(addToCartLoading());

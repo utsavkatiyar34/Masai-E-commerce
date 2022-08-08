@@ -18,6 +18,7 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import { Link, NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import TakeoutDiningIcon from '@mui/icons-material/TakeoutDining';
 import { logOut } from "../Store/actions";
 
 export default function ButtonAppBar() {
@@ -40,7 +41,17 @@ export default function ButtonAppBar() {
       onKeyDown={() => toggleDrawer(false)}
     >
       <List sx={{marginTop:'2vw'}}>
-    
+      <Divider />
+      <Link to="/cart" style={{textDecoration:'none'}}>
+          <ListItem >
+            <ListItemButton style={{color:'purple',size:'2vw'}}>
+              <ListItemIcon>
+              <LocalGroceryStoreIcon sx={{color:'purple',fontSize:'2vw'}}/>
+              </ListItemIcon >
+              <ListItemText primary="Cart" />
+            </ListItemButton>
+          </ListItem>
+          </Link>
       <Divider />
         <Link to="/" style={{textDecoration:'none'}}>
           <ListItem >
@@ -57,7 +68,7 @@ export default function ButtonAppBar() {
           <ListItem >
             <ListItemButton style={{color:'purple',size:'2vw'}}>
               <ListItemIcon>
-                <LocalGroceryStoreIcon sx={{color:'purple',fontSize:'2vw'}}/>
+                <TakeoutDiningIcon sx={{color:'purple',fontSize:'2vw'}}/>
               </ListItemIcon >
               <ListItemText primary="Grocery" />
             </ListItemButton>
