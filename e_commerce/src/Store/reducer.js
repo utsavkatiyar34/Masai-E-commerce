@@ -39,7 +39,7 @@ import {
         cart: {
           loading: false,
           error: false,
-          data: [],
+          cartitems: [],
         },
       };
       export const reducer = (state = initialState, action) => {
@@ -59,7 +59,7 @@ import {
                 ...state.cart,
                 loading: false,
                 error: false,
-                data:action.payload
+                cartitems:action.payload
               },
             };
           case ADD_TOCART_ERROR:

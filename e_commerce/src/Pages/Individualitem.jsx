@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect} from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { Navigate, useParams } from 'react-router-dom';
 import "../Styles/products.css";
@@ -6,12 +6,28 @@ import { Button } from "@mui/material";
 
 import StarIcon from '@mui/icons-material/Star';
 import axios from 'axios';
-import { getProductsError, getProductsLoading, getProductsSuccess } from '../Store/actions';
+import { addToCartError, addToCartLoading, addToCartSuccess, getProductsError, getProductsLoading, getProductsSuccess } from '../Store/actions';
 
 export const Individualitem = () => {
   const {id} = useParams();
   const dispatch = useDispatch();
+  
   const { data } = useSelector((state) => state.products);
+  const { cartitems } = useSelector((state) => state.cart);
+
+let handleAddcart=()=>{
+  dispatch(addToCartLoading());
+  axios({
+    method: "post",
+    url: 'http://localhost:4000/cart',
+    data: data[0]
+  })
+    .then((res) => {
+      dispatch(addToCartSuccess(res.data));
+
+    })
+    .catch(() => dispatch(addToCartError()));
+};
 
 let fetchItem = () => {
   dispatch(getProductsLoading());
@@ -21,6 +37,7 @@ let fetchItem = () => {
   })
     .then((res) => {
       dispatch(getProductsSuccess(res.data));
+      
     })
     .catch(() => dispatch(getProductsError()));
 };
@@ -53,6 +70,8 @@ if (logdata.length === 0) {
         marginBottom: "0",
         "&:hover": { backgroundColor: "purple", color: "white" },
       }}
+      
+      onClick={()=>handleAddcart()}
     >
       Add to cart
     </Button>
