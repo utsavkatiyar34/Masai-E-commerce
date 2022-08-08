@@ -7,15 +7,16 @@ import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import Drawer from "@mui/material/Drawer";
+import HomeIcon from '@mui/icons-material/Home';
+import LocalGroceryStoreIcon from '@mui/icons-material/LocalGroceryStore';
+import LocalPharmacyIcon from '@mui/icons-material/LocalPharmacy';
 import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { logOut } from "../Store/actions";
 
@@ -38,39 +39,45 @@ export default function ButtonAppBar() {
       onClick={() => toggleDrawer(false)}
       onKeyDown={() => toggleDrawer(false)}
     >
-      <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? (
-                  <InboxIcon sx={{ color: "purple" }} />
-                ) : (
-                  <MailIcon sx={{ color: "purple" }} />
-                )}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
+      <List sx={{marginTop:'2vw'}}>
+    
       <Divider />
-      <List>
-        {["All mail", "Trash", "Spam"].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
+        <Link to="/" style={{textDecoration:'none'}}>
+          <ListItem >
+            <ListItemButton style={{color:'purple',size:'2vw'}}>
               <ListItemIcon>
-                {index % 2 === 0 ? (
-                  <InboxIcon sx={{ color: "purple" }} />
-                ) : (
-                  <MailIcon sx={{ color: "purple" }} />
-                )}
-              </ListItemIcon>
-              <ListItemText primary={text} />
+                <HomeIcon sx={{color:'purple',fontSize:'2vw'}}/>
+              </ListItemIcon >
+              <ListItemText primary="Home" />
             </ListItemButton>
           </ListItem>
-        ))}
+          </Link>
+          <Divider />
+          <Link to="/grocery" style={{textDecoration:'none'}}>
+          <ListItem >
+            <ListItemButton style={{color:'purple',size:'2vw'}}>
+              <ListItemIcon>
+                <LocalGroceryStoreIcon sx={{color:'purple',fontSize:'2vw'}}/>
+              </ListItemIcon >
+              <ListItemText primary="Grocery" />
+            </ListItemButton>
+          </ListItem>
+          </Link>
+          <Divider />
+          <Link to="/pharmacy" style={{textDecoration:'none'}}>
+          <ListItem >
+            <ListItemButton style={{color:'purple',size:'2vw'}}>
+              <ListItemIcon>
+                <LocalPharmacyIcon sx={{color:'purple',fontSize:'2vw'}}/>
+              </ListItemIcon >
+              <ListItemText primary="Pharmacy" style={{textTransform:'capitalization'}}/>
+            </ListItemButton>
+          </ListItem>
+          </Link>
+          <Divider />
       </List>
+      
+     
     </Box>
   );
  

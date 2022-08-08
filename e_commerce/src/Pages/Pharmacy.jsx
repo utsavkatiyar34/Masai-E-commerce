@@ -1,44 +1,41 @@
 import React, { useEffect, useState } from "react";
 import { Button } from "@mui/material";
-import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { Navigate } from "react-router-dom";
 import StarIcon from "@mui/icons-material/Star";
 import { useDispatch, useSelector } from "react-redux";
 import { Productcard } from "../Components/Productcard";
 import "../Styles/products.css";
 import axios from "axios";
-import {
-  getProductsError,
-  getProductsLoading,
-  getProductsSuccess,
-} from "../Store/actions";
-export const Home = () => {
-  const [page, setPage] = useState(1);
-  const [sort, setSort] = useState(null);
+import { getProductsError, getProductsLoading, getProductsSuccess } from "../Store/actions";
+export const Pharmacy = () => {
+  const [page, setPage]= useState(1);
+  const [sort,setSort]= useState("asc");
   const [star, setStar] = useState("");
   const dispatch = useDispatch();
-  const { data } = useSelector((state) => state.products);
+  const {  data } = useSelector((state) => state.products);
   let fetchProducts = () => {
     dispatch(getProductsLoading());
     axios({
       method: "get",
-      url: `http://localhost:4000/products?${star}_sort=price&_order=${sort}&_page=${page}&_limit=20`,
+      url: `http://localhost:4000/products?${star}category_like=pharmacy&_sort=price&_order=${sort}&_page=${page}&_limit=20`,
     })
       .then((res) => {
+        
         dispatch(getProductsSuccess(res.data));
       })
       .catch(() => dispatch(getProductsError()));
-  };
+    };
   useEffect(() => {
     fetchProducts();
-  }, [page, sort, star]);
+  }, [page,sort,star]);
   const { logdata } = useSelector((state) => state.login);
   if (logdata.length === 0) {
     return <Navigate to="/login" />;
   }
   return (
-    <>
+        <>
       <div
         style={{
           marginTop: ".5vw",
@@ -268,7 +265,7 @@ export const Home = () => {
             marginBottom: "0",
             "&:hover": { backgroundColor: "purple", color: "white" },
           }}
-          disabled={page === 5}
+          disabled={page === 3}
           onClick={() => setPage((prev) => prev + 1)}
         >
           <ArrowForwardIosIcon />
