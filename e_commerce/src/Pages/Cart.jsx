@@ -17,6 +17,15 @@ const[cart,setCart]=useState([]);
                   })
 
               };
+              let removeItem = (id) => {
+                axios({
+                  method: "delete",
+                  url: `http://localhost:4000/cart/${id}`,
+                })
+                  .then((res) => {
+                   setCart(res.data);
+                  })
+              }
 
               useEffect(() => {
                 fetchCart();
@@ -60,6 +69,7 @@ const[cart,setCart]=useState([]);
             marginBottom: "0",
             "&:hover": { backgroundColor: "purple", color: "white" },
           }}
+          onClick={()=>{removeItem(ele.id)}}
         >
           Remove from cart
         </Button>

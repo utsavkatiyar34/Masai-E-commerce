@@ -1103,58 +1103,25 @@
   ],
   "cart": [
     {
-      "id": 87,
-      "title": "Latanoprost",
-      "color": "Yellow",
-      "price": 363,
-      "description": "eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis",
-      "rating": 2.4,
-      "category": "pharmacy",
-      "hex": "#737919",
-      "imageBase": "https://via.placeholder.com/500"
-    },
-    {
-      "id": 94,
-      "title": "Eucalyptol",
-      "color": "Mauv",
-      "price": 402,
-      "description": "odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin",
-      "rating": 2.9,
-      "category": "pharmacy",
-      "hex": "#fd9a0f",
-      "imageBase": "https://via.placeholder.com/500"
-    },
-    {
-      "id": 91,
-      "title": "OCTINOXATE, TITANIUM DIOXIDE, ZINC OXIDE",
-      "color": "Mauv",
-      "price": 767,
-      "description": "turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus",
-      "rating": 3.8,
-      "category": "pharmacy",
-      "hex": "#3d54d3",
-      "imageBase": "https://via.placeholder.com/500"
-    },
-    {
-      "id": 65,
-      "title": "ciprofloxacin",
-      "color": "Blue",
-      "price": 136,
-      "description": "primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam",
-      "rating": 2.3,
-      "category": "pharmacy",
-      "hex": "#3fa369",
-      "imageBase": "https://via.placeholder.com/500"
-    },
-    {
-      "id": 47,
-      "title": "Muffin - Banana Nut Individual",
+      "id": 72,
+      "title": "Diphenhydramine HCl",
       "color": "Orange",
-      "price": 53,
-      "description": "faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus",
-      "rating": 1.7,
+      "price": 328,
+      "description": "tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit nec",
+      "rating": 4,
+      "category": "pharmacy",
+      "hex": "#7cea80",
+      "imageBase": "https://via.placeholder.com/500"
+    },
+    {
+      "id": 5,
+      "title": "Sweet Pea Sprouts",
+      "color": "Blue",
+      "price": 45,
+      "description": "ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo",
+      "rating": 2.6,
       "category": "grocery",
-      "hex": "#767616",
+      "hex": "#ff94c4",
       "imageBase": "https://via.placeholder.com/500"
     }
   ]
