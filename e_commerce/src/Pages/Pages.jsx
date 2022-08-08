@@ -14,7 +14,9 @@ export const Pages = () => {
         <Route exact path="/signup" element={<Signup />}></Route>
         <Route exact path="/grocery" element={<Grocery/>}></Route>
         <Route exact path="/pharmacy" element={<Pharmacy />}></Route>
-        <Route  path="/product/:title/:id" element={<Individualitem/>}></Route>
+        <Route  path="/:id" element={<Individualitem />}></Route>
+        <Route  path="/grocery/:id" element={<Individualitem />}></Route>
+        <Route  path="/pharmacy/:id" element={<Individualitem />}></Route>
         <Route path="*" element={<h2>Error... Page not found.</h2>}></Route>
     </Routes>
     

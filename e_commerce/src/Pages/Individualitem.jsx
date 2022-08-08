@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { Navigate, useParams } from 'react-router-dom';
 import "../Styles/products.css";
@@ -9,11 +9,11 @@ import axios from 'axios';
 import { getProductsError, getProductsLoading, getProductsSuccess } from '../Store/actions';
 
 export const Individualitem = () => {
-  const {id, title} = useParams();
+  const {id} = useParams();
   const dispatch = useDispatch();
   const { data } = useSelector((state) => state.products);
 
-let fetchItem = (id) => {
+let fetchItem = () => {
   dispatch(getProductsLoading());
   axios({
     method: "get",
@@ -25,7 +25,7 @@ let fetchItem = (id) => {
     .catch(() => dispatch(getProductsError()));
 };
 useEffect(() => {
-  fetchItem(id);
+  fetchItem();
 }, []);
 const { logdata } = useSelector((state) => state.login);
 if (logdata.length === 0) {
@@ -35,9 +35,9 @@ if (logdata.length === 0) {
     <>
     {data.map((ele) => (
     <div className="productcard" style={{width:'80%',backgroundColor:"",marginLeft:'auto',marginRight:'auto',borderRadius:'2.5px'}}>
-    <h4 style={{textTransform:'uppercase',fontSize:'2vw'}}>{title}</h4>
+    <h4 style={{textTransform:'uppercase',fontSize:'2vw'}}>{ele.title}</h4>
     <div style={{height:'15vw',width:'50%',backgroundColor:`${ele.hex}`,marginLeft:'auto',marginRight:'auto',borderRadius:'5px'}} ></div>
-    <h4>Rating: {ele.rating} <StarIcon sx={{fontSize:'1.5vw',color:'gold'}}/> </h4>
+    <h4>Rating: {ele.rating} <StarIcon sx={{fontSize:'1.5vw',color:'purple'}}/> </h4>
     <h4>Price: ₹{ele.price}</h4>
     <h4>Category: {ele.category}</h4>
     <h4>Description: {ele.description}</h4>
