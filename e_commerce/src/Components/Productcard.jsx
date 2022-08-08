@@ -1,6 +1,7 @@
 import React from "react";
 import "../Styles/products.css";
 import { Button } from "@mui/material";
+import { Link } from "react-router-dom";
 import StarIcon from '@mui/icons-material/Star';
 
 export const Productcard = ({id, title, color, price, description, rating, category, hex, imageBase}) => {
@@ -10,6 +11,7 @@ export const Productcard = ({id, title, color, price, description, rating, categ
         <h4>{title}</h4>
         <h4>Rating: {rating} <StarIcon sx={{fontSize:'1.5vw',color:'gold'}}/> </h4>
         <h4>Price: ₹{price}</h4>
+        <Link to={`product/${title}/${id}`} style={{textDecoration:'none'}}>
         <Button
           varient="solid"
           sx={{
@@ -23,10 +25,10 @@ export const Productcard = ({id, title, color, price, description, rating, categ
             marginBottom: "0",
             "&:hover": { backgroundColor: "purple", color: "white" },
           }}
-        //   onClick={() => getModal(id, brand, title, price, image, catagory)}
         >
           Details
         </Button>
+        </Link>
         </div>
   )
 }

@@ -5,6 +5,7 @@ import { Home } from './Home';
 import {Login} from './Login';
 import { Pharmacy } from './Pharmacy';
 import { Signup } from './Signup';
+import { Individualitem } from './Individualitem';
 export const Pages = () => {
   return (<>
     <Routes>
@@ -13,6 +14,7 @@ export const Pages = () => {
         <Route exact path="/signup" element={<Signup />}></Route>
         <Route exact path="/grocery" element={<Grocery/>}></Route>
         <Route exact path="/pharmacy" element={<Pharmacy />}></Route>
+        <Route  path="/product/:title/:id" element={<Individualitem/>}></Route>
         <Route path="*" element={<h2>Error... Page not found.</h2>}></Route>
     </Routes>
     
